@@ -1,11 +1,14 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
+import Amplify from 'aws-amplify'
+import awsconfig from './aws-exports'
 import SignIn from './components/SignIn'
 import SignUp from './components/SignUp'
 import Confirm from './components/Confirm'
 import Reset from './components/Reset'
 import './app.styles.scss'
 
+Amplify.configure(awsconfig)
 const App = () => {
   return (
     <BrowserRouter history={history} basename='/login'>
