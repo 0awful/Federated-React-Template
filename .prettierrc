@@ -3,5 +3,5 @@
   "jsxSingleQuote": true,
   "semi": false,
   "bracketSpacing": true,
-  "arrowParens": "always",
+  "arrowParens": "always"
 }
