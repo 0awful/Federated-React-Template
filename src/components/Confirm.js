@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'lib-app/react'
 
 export default function Confirm() {
   const [code, updateCode] = useState()

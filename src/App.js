@@ -1,6 +1,11 @@
-import React from 'react'
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
-import Amplify from 'aws-amplify'
+import React from 'lib-app/react'
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Redirect,
+} from 'lib-app/react-router-dom'
+import Amplify from 'lib-app/aws-amplify'
 import awsconfig from './aws-exports'
 import SignIn from './components/SignIn'
 import SignUp from './components/SignUp'

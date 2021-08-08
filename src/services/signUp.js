@@ -1,4 +1,4 @@
-import { Auth } from 'aws-amplify'
+import { Auth } from 'lib-app/aws-amplify'
 
 export default async function signUp({
   password,

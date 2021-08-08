@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { signIn } from '../services/signIn'
+import React, { useState } from 'lib-app/react'
+import { Link } from 'lib-app/react-router-dom'
+import signIn from '../services/signIn'
 
 export default function SignIn() {
   const [phone, updatePhone] = useState()
