@@ -15,6 +15,8 @@
   "version": "1.0.1",
   "description": "Webpack 5 boilerplate with React 17, Tailwind 2, using babel, sass, with HMR and an optimized production build",
   "dependencies": {
+    "@aws-amplify/ui-react": "^1.2.8",
+    "aws-amplify": "^4.2.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
@@ -33,8 +35,7 @@
     "deploy": "gh-pages -d dist"
   },
   "husky": {
-    "hooks": {
-    }
+    "hooks": {}
   },
   "lint-staged": {
     "*.{js,jsx}": [
