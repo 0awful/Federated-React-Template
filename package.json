@@ -1,19 +1,11 @@
 {
   "author": {
-    "name": "Stefan Wüthrich",
-    "url": "https://altafino.com"
+    "name": "Izaac Wilkowski"
   },
-  "keywords": [
-    "react",
-    "reactjs",
-    "webpack",
-    "boilerplate",
-    "tailwind"
-  ],
   "license": "MIT",
-  "name": "react-webpack-5-tailwind-2",
+  "name": "auth-app",
   "version": "1.0.1",
-  "description": "Webpack 5 boilerplate with React 17, Tailwind 2, using babel, sass, with HMR and an optimized production build",
+  "description": "auth micro front end. Exposes auth routes and Sign out button",
   "main": "index.js",
   "scripts": {
     "test": "jest",
