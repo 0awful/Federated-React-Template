@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { signIn } from '../services/signIn'
 
 export default function SignIn() {
   const [phone, updatePhone] = useState()
@@ -35,7 +36,7 @@ export default function SignIn() {
 
       <button
         onClick={() => {
-          signInRequest({
+          signIn({
             phone,
             email,
           })
@@ -44,7 +45,7 @@ export default function SignIn() {
         submit
       </button>
       <Link to='/sign-up'>
-        <p>I don't have an account</p>
+        <p>I dont have an account</p>
       </Link>
     </form>
   )
