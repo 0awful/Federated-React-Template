@@ -22,7 +22,7 @@ module.exports = {
   plugins: ["babel", "react", "import", "prettier","react-hooks"],
   rules: {
     "import/no-duplicates": "error",
-    "import/no-unresolved": "0",
+    "import/no-unresolved": "error",
     "import/named": "error",
     "prettier/prettier": "error",
     "react/no-typos": "error",
