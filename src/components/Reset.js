@@ -1,4 +1,4 @@
-import React, { useState } from 'lib-app/react'
+import React, { useState } from 'react'
 
 export default function Reset() {
   const [code, updateCode] = useState()

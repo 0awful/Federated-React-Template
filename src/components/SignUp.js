@@ -1,5 +1,5 @@
-import React, { useState } from 'lib-app/react'
-import { Link } from 'lib-app/react-router-dom'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function SignUp() {
   const [phone, updatePhone] = useState()
