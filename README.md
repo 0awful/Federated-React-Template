@@ -1,1 +1,15 @@
-This Repo is concerned with account creation and login. It expects to be able to communicate with a backing service that will supports creating an account via email or phone number, and login via same parameters. 
+# Template Repo
+
+### Commands
+
+`yarn start` - starts the application on port 3000 or the `PORT` environment variable and follows `webpack.config.js`
+
+`yarn test` - runs the jest tests based on the config given in `package.json`
+
+`yarn lint-fix` - executes linting with `--fix`, then executes prettier to format
+
+### Tech
+
+Tailwind
+React
+Jest
