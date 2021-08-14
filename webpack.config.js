@@ -18,7 +18,7 @@ module.exports = {
   mode: 'development',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    port: 3001,
+    port: process.env.PORT || 3000,
   },
   target: 'web',
   output: {
