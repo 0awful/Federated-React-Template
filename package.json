@@ -3,9 +3,9 @@
     "name": "Izaac Wilkowski"
   },
   "license": "MIT",
-  "name": "auth-app",
-  "version": "1.0.1",
-  "description": "auth micro front end. Exposes auth routes and Sign out button",
+  "name": "template-app-you-should-put-a-name-here",
+  "version": "1.0.0",
+  "description": "Templating application to help spin up a new app",
   "main": "index.js",
   "scripts": {
     "test": "jest",
