@@ -1,6 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { ModuleFederationPlugin } = require('webpack').container
 const path = require('path')
+const common = require('./webpack.common')
+const { merge } = require('webpack-merge')
 
 // adds all your dependencies as shared modules
 // version is inferred from package.json in the dependencies
@@ -13,7 +15,7 @@ const path = require('path')
 // with might lead the bundle size problems
 const deps = require('./package.json').dependencies
 
-module.exports = {
+module.exports = merge(common, {
   entry: './src/index',
   mode: 'development',
   devServer: {
@@ -24,18 +26,6 @@ module.exports = {
   output: {
     publicPath: 'auto',
   },
-  module: {
-    rules: [
-      {
-        test: /\.jsx?$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/,
-        options: {
-          presets: ['@babel/preset-react'],
-        },
-      },
-    ],
-  },
   plugins: [
     new ModuleFederationPlugin({
       name: 'YOUR_NAME_HERE',
@@ -43,7 +33,7 @@ module.exports = {
       exposes: {
         './stub-component': './src/components/stub',
         './stub-service': './src/services/stub',
-        './stub-application': './src/App'
+        './stub-application': './src/App',
       },
       shared: {
         ...deps,
@@ -62,4 +52,4 @@ module.exports = {
       template: './public/index.html',
     }),
   ],
-}
+})
