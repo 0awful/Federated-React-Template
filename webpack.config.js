@@ -16,7 +16,7 @@ const { merge } = require('webpack-merge')
 const deps = require('./package.json').dependencies
 
 module.exports = merge(common, {
-  entry: './src/index',
+  entry: './src/components/LegalDialog',
   mode: 'development',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
@@ -28,12 +28,10 @@ module.exports = merge(common, {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'YOUR_NAME_HERE',
+      name: 'legal_dialog_micro_frontend',
       filename: 'remoteEntry.js',
       exposes: {
-        './stub-component': './src/components/stub',
-        './stub-service': './src/services/stub',
-        './stub-application': './src/App',
+        './LegalDialog': './src/components/LegalDialog.tsx',
       },
       shared: {
         ...deps,
@@ -55,6 +53,20 @@ module.exports = merge(common, {
           requiredVersion: deps['react-dom'],
           import: 'react-dom',
           shareKey: 'react-dom',
+          shareScope: 'default',
+          singleton: true,
+        },
+        '@aws-amplify/ui-react': {
+          requiredVersion: deps['@aws-amplify/ui-react'],
+          import: '@aws-amplify/ui-react',
+          shareKey: '@aws-amplify/ui-react',
+          shareScope: 'default',
+          singleton: true,
+        },
+        'aws-amplify': {
+          requiredVersion: deps['aws-amplify'],
+          import: 'aws-amplify',
+          shareKey: 'aws-amplify',
           shareScope: 'default',
           singleton: true,
         },

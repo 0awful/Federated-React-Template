@@ -4,6 +4,7 @@ const tailwindcss = require('tailwindcss')
 const autoprefixer = require('autoprefixer') // help tailwindcss to work
 
 module.exports = {
+  devtool: 'inline-source-map',
   // Customize the webpack build process
   plugins: [
     new MiniCssExtractPlugin({
@@ -15,12 +16,15 @@ module.exports = {
       template: 'public/index.html',
     }),
   ],
-
   // Determine how modules within the project are treated
   module: {
     rules: [
       // JavaScript: Use Babel to transpile JavaScript files
-      { test: /\.(js|jsx)$/, exclude: /node_modules/, use: ['babel-loader'] },
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader'],
+      },
 
       // Styles: Inject CSS into the head with source maps
       {
@@ -58,6 +62,10 @@ module.exports = {
           fullySpecified: false,
         },
       },
+      { test: /\.(ts|tsx)$/, exclude: /node_modules/, use: ['ts-loader'] },
     ],
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
   },
 }
