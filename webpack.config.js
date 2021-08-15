@@ -38,12 +38,24 @@ module.exports = merge(common, {
       shared: {
         ...deps,
         react: {
+          requiredVersion: deps.react,
+          import: 'react',
+          shareKey: 'react',
+          shareScope: 'default',
           singleton: true,
         },
         tailwindcss: {
+          requiredVersion: deps.tailwindcss,
+          import: 'tailwindcss',
+          shareKey: 'tailwindcss',
+          shareScope: 'default',
           singleton: true,
         },
         'react-dom': {
+          requiredVersion: deps['react-dom'],
+          import: 'react-dom',
+          shareKey: 'react-dom',
+          shareScope: 'default',
           singleton: true,
         },
       },
