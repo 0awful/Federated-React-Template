@@ -38,11 +38,12 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'auth_micro_frontend',
+      name: 'YOUR_NAME_HERE',
       filename: 'remoteEntry.js',
       exposes: {
-        './App': './src/App',
-        './SignOut': './src/SignOut',
+        './stub-component': './src/components/stub',
+        './stub-service': './src/services/stub',
+        './stub-application': './src/App'
       },
       shared: {
         ...deps,
@@ -53,12 +54,6 @@ module.exports = {
           singleton: true,
         },
         'react-dom': {
-          singleton: true,
-        },
-        '@aws-amplify/ui-react': {
-          singleton: true,
-        },
-        'aws-amplify': {
           singleton: true,
         },
       },
